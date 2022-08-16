@@ -12,7 +12,7 @@
     <div class="container">
       <div class="item">
           <ul>
-            <li><a href='projetoanalise.php'>Início</a></li>
+            <li><a href='index.php'>Início</a></li>
             <li><a href='minhaconta.php'>Minha conta</a></li>
             <li><a href='#'>Regras do site</a></li>
             <li><a href='#'>Minhas publicações</a></li>

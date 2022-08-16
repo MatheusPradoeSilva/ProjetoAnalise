@@ -24,7 +24,7 @@ if(isset($_POST['login']) && !empty($_POST['email']) && !empty($_POST['senha']))
         $_SESSION['email'] = $email;
         $_SESSION['senha'] = $senha;
 
-       header("Location: projetoanalise.php") ;
+       header("Location: index.php") ;
     }
 
 
