@@ -6,8 +6,12 @@
     
 <nav>
 <ul class="container">
+  <form action = "TelaLogin.php" method = "POST">
+<input type="image" class = "menubot" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAV0lEQVRIie3SsQ2AMBADQD9zoOwDg7C4B3GaREJRJES+gMLXfWN/YcDekHRKotZR0nHPjKGAAPbkn4yI0o8tGfZoLLgAMJHHlmGLPNMZz/RnPNMZz/R7FeMv6QUDfUW1AAAAAElFTkSuQmCC">
+</form>
 <li class='dropdown'>
 <a href='#home'>Home <i class="fa fa-angle-down"></i></a>
+
 <div class='mega-menu'>
     <div class="container">
       <div class="item">
@@ -37,6 +41,10 @@
    
 </ul>
 
-      <input type="text" name="busc"><button type="submit"><i class="fa fa-search"></i>x</button>
+<div class="barra">
+      <input type="text" class="o" name="busc" placeholder="Pesquisar">
+      <img  src="img/icons8-pesquisar-50.png" class ="lupa" />
+
+</div>
 
 </nav>

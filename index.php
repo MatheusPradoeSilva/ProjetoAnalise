@@ -9,7 +9,7 @@ if((!isset($_SESSION['email']) == true ) and (!isset($_SESSION['senha']) == true
     unset($_SESSION['senha']);
 } else{
     $logado = $_SESSION['email'];
-    echo "Bem vindo $logado";
+    echo "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Bem vindo $logado";
 }
 
 ?>
@@ -24,15 +24,19 @@ if((!isset($_SESSION['email']) == true ) and (!isset($_SESSION['senha']) == true
 
 </head>
 <body>
-
+    <div class = corpo>
     <h2>Compartilhe conosco!</h2>
-    <h4>Venha se juntar á nós e compartilhe já seus<br>
+    Venha se juntar á nós e compartilhe já seus<br>
      artigos, ideais, receitas e muito mais.
-     <br><br>
-    Publique no botão abaixo e seja feliz!</h4>
+     <br><br><br>
+    Publique no botão abaixo e seja feliz!
+    <br>
+    <button class = "public" >Publicar</button>
+    <img class = "comput" src="img/mexendocomput.jpg">
+       <p class = "linha">_____________________________________________________________________________________________________________</p>
+   
 
-    <button>Publicar</button>
-
+</div>
 </body>
 
 

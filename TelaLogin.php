@@ -29,7 +29,7 @@ include('rodape.php');
         <h5><a href='TelaEsqSen.php'> Esqueci minha senha</a><h5>
         
         
-        <button input type= "submit" name= "login" id= "login">Login</button>
+        <button input class = "public"type= "submit" name= "login" id= "login">Login</button>
     </div>
 
 

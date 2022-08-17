@@ -31,7 +31,7 @@ include('rodape.php');
         <input type="password" placeholder="Insira sua senha">
         <br><br>
         
-        <button>Enviar</button>
+        <button class = "public">Enviar</button>
     </div>
 
 

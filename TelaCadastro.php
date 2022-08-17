@@ -30,7 +30,7 @@ include('rodape.php');
         <lable>Email</lable><br>
         <input type="email"name="email" id="email" placeholder="Insira seu email">
         <br><br>
-        <button input type= "submit" name= "entrar" id= "entrar">Entrar</button>
+        <button input class = "public" type= "submit" name= "entrar" id= "entrar">Entrar</button>
     </div>
 
 
