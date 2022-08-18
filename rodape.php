@@ -44,7 +44,8 @@ if((!isset($_SESSION['email']) == true ) and (!isset($_SESSION['senha']) == true
             <li><a href='#'>Culinária</a></li>
             <li><a href='#'>Famosos</a></li>
             <li><a href='#'>Pets</a></li>
-            <li><button type='submit'>Sair da conta</li>
+            <form action= 'sairconta.php' method= 'POST'>
+            <li><button tye submit name ='exit' id ='exit' type='submit'>Sair da conta</li>
             <div>" ?>
     
     </ul>

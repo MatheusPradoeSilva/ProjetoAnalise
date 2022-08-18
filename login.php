@@ -13,7 +13,6 @@ if(isset($_POST['login']) && !empty($_POST['email']) && !empty($_POST['senha']))
     $sql = "SELECT * FROM usuario WHERE email = '$email' and senha= '$senha'";
     $result = $conexao->query($sql);
 
-    print_r($result);
     if(mysqli_num_rows($result) < 1)
     {
         unset($_SESSION['email']);
