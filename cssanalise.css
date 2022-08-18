@@ -13,6 +13,7 @@ a {text-decoration: none;}
 }
 
 .public {
+  font-size: medium;
   margin-top: 3%;
   border-radius: 18px;
   border: 0px;
@@ -55,16 +56,18 @@ ul {
 }
 
 nav { 
+  height: 40px;
   background-image: linear-gradient( to right, rgb(36, 55, 75), rgb(163, 192, 240) ); 
   font-size: 0;
   position: relative;
     
 }
 .lupa{
-  width: 20px;
-  height:20px;
-  margin-left:-30px;
-  margin-bottom: -8px;
+  width: 16px;
+  height: 16px;
+  margin-left:-22px;
+  margin-bottom: -18px;
+  margin-top: -16px;
 }
   .o{
     margin-left: -150px;
@@ -73,7 +76,7 @@ nav {
     font-family: sans-serif;
     border-radius: 5px;
     border-color: white;
-    margin-top: -20px;
+    margin-top: 9px;
   }
 
 .barra{
@@ -156,7 +159,7 @@ hr {
   display: flex;
   justify-content: space-between;
   gap: 0.5em;
-  max-width: 1100px;
+  max-width: 1400px;
   width: 90%;
   padding-left: 90px;
   padding-bottom: 50px;

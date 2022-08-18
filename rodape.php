@@ -11,17 +11,26 @@
 <nav>
 <ul class="container">                                    
   <div class="dropdown">
-    <input type="image" class= "menubot" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAV0lEQVRIie3SsQ2AMBADQD9zoOwDg7C4B3GaREJRJES+gMLXfWN/YcDekHRKotZR0nHPjKGAAPbkn4yI0o8tGfZoLLgAMJHHlmGLPNMZz/RnPNMZz/R7FeMv6QUDfUW1AAAAAElFTkSuQmCC" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+    <input type="image" class= "menubot" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAV0lEQVRIie3SsQ2AMBADQD9zoOwDg7C4B3GaREJRJES+gMLXfWN/YcDekHRKotZR0nHPjKGAAPbkn4yI0o8tGfZoLLgAMJHHlmGLPNMZz/RnPNMZz/R7FeMv6QUDfUW1AAAAAElFTkSuQmCC" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-angle-down"></i>
    
     <ul class="dropdown-menu">
       <?php session_start(); 
-       $logado = $_SESSION['email'];
+      
+
+if((!isset($_SESSION['email']) == true ) and (!isset($_SESSION['senha']) == true))
+{
+    unset($_SESSION['email']);
+    unset($_SESSION['senha']);
+} else{
+    $logado = $_SESSION['email'];
+   echo "$logado";
+}
+
       echo " <li class='dropdown'>
       <div class='mega-menu'>
           <div class='container'>
             <div class='item'>
       
-      <li>Bem vindo $logado</li>
     <li><a href='index.php'>Início</a></li>
             <li><a href='minhaconta.php'>Minha conta</a></li>
             <li><a href='#'>Regras do site</a></li>
@@ -41,9 +50,9 @@
     </ul>
   </div>
 </div>
-<li class='dropdown'>
-<a href='#home'>Home <i class="fa fa-angle-down"></i></a>
 
+<li class='dropdown'>
+<a href='#home'><i class="fa fa-angle-down"></i></a>
    
 </ul>
 
