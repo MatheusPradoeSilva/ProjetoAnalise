@@ -45,7 +45,7 @@ if((!isset($_SESSION['email']) == true ) and (!isset($_SESSION['senha']) == true
             <li><a href='#'>Famosos</a></li>
             <li><a href='#'>Pets</a></li>
             <form action= 'sairconta.php' method= 'POST'>
-            <li><button tye submit name ='exit' id ='exit' type='submit'>Sair da conta</li>
+            <li><button name ='exit' id ='exit' type='submit'>Sair da conta</li>
             <div>" ?>
     
     </ul>
@@ -55,12 +55,12 @@ if((!isset($_SESSION['email']) == true ) and (!isset($_SESSION['senha']) == true
 <li class='dropdown'>
 <a href='#home'><i class="fa fa-angle-down"></i></a>
    
-</ul>
+
 
 <div class="barra">
       <input type="text" class="o" name="busc" placeholder="Pesquisar">
       <img  src="img/icons8-pesquisar-50.png" class ="lupa" />
-
+      </ul>
 </div>
 
 </nav>
