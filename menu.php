@@ -23,17 +23,17 @@ if((!isset($_SESSION['email']) == true ) and (!isset($_SESSION['senha']) == true
     unset($_SESSION['senha']);
 } else{
     $logado = $_SESSION['email'];
+    
    echo "$logado";
 }
 
       echo " <li class='dropdown'>
       <div class='mega-menu'>
           <div class='container'>
-            <div class='item'>
-      
+            <div class='item'>     
     <li><a href='index.php'>Início</a></li>
             <li><a href='minhaconta.php'>Minha conta</a></li>
-            <li><a href='#'>Regras do site</a></li>
+            <li><a href='regras.php'>Regras do site</a></li>
             <li><a href='#'>Minhas publicações</a></li>
             <li><a href='#'>Publicar</a></li>
             <li class = 'linamenu'>________________</li>
@@ -44,10 +44,10 @@ if((!isset($_SESSION['email']) == true ) and (!isset($_SESSION['senha']) == true
             <li><a href='#'>Culinária</a></li>
             <li><a href='#'>Famosos</a></li>
             <li><a href='#'>Pets</a></li>
-            <form action= 'sairconta.php' method= 'POST'>
-            <li><button name ='exit' id ='exit' type='submit'>Sair da conta</li>
-            <div>" ?>
-    
+            <form action= 'sairconta.php'>
+            <li><button name ='exit' id ='exit' type='submit'>Sair da conta</button></li>
+            <div>
+            </form>" ?>
     </ul>
   </div>
 </div>

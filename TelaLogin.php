@@ -1,7 +1,7 @@
 <?php
 
 include_once('conexao.php');
-include('rodape.php');
+include("menu.php");
 
 ?>
 

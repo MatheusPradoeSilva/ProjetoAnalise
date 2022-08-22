@@ -2,7 +2,7 @@
 
 include_once('conexao.php');
 
-include('rodape.php');
+include("menu.php");
 
 if(isset($_POST['entrar']))
 {
