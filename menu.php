@@ -34,7 +34,7 @@ if((!isset($_SESSION['email']) == true ) and (!isset($_SESSION['senha']) == true
     <li><a href='index.php'>Início</a></li>
             <li><a href='minhaconta.php'>Minha conta</a></li>
             <li><a href='regras.php'>Regras do site</a></li>
-            <li><a href='#'>Minhas publicações</a></li>
+            <li><a href='minhapublic.php'>Minhas publicações</a></li>
             <li><a href='#'>Publicar</a></li>
             <li class = 'linamenu'>________________</li>
             <li><h5>CATEGORIAS<h5></li>

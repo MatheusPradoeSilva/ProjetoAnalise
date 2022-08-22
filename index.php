@@ -21,6 +21,7 @@ include("menu.php");
      <br><br><br>
     Publique no botão abaixo e seja feliz!
     <br>
+    <form action="minhapublic.php">
     <button class = "public" >Publicar</button>
 
     <!-- 1 carrosel -->
