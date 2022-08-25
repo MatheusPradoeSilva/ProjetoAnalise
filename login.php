@@ -14,10 +14,7 @@ if(isset($_POST['login']) && !empty($_POST['email']) && !empty($_POST['senha']))
     $result = $conexao->query($sql);
 
     if(mysqli_num_rows($result) < 1)
-    {
-        unset($_SESSION['email']);
-        unset($_SESSION['senha']);
-
+    {   
         header("Location: TelaLogin.php");
     }else {
         $_SESSION['email'] = $email;

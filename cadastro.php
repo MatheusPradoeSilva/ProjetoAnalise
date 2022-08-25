@@ -11,6 +11,7 @@ if(isset($_POST['entrar']))
     $senha = $_POST['senha'];
     $email = $_POST['email'];
 
+
     $result = mysqli_query($conexao, "INSERT INTO usuario(nome, senha, email) 
     VALUES('$nome', '$senha', '$email')");
 

@@ -16,16 +16,19 @@ include("menu.php");
    <title>Publicando</title>
 </head>
 <body>
-    <form action= "cadastro.php" method= "POST">
+    <form action= "publicar.php" method= "POST">
     <div class = corpo>
+   
+  <input type="file" name="image" accept="image/png, image/gif, image/jpeg" /><br>
+
         <lable>Título</lable><br>
         <input type="text" name="titulo" id="titulo" placeholder="Digite aqui o título de sua publicação">
         <br><br>
         <lable>Descrição</lable><br>
-        <input type="text" name="desc" id="desc" placeholder="Digite aqui a descrição (opcional)">
+        <input type="text" name="descr" id="descr" placeholder="Digite aqui a descrição (opcional)">
         <br><br>
-            <br>
-        <input type="email"name="email" id="email" placeholder="Digite aqui sua publicação">
+                    <br>
+        <input type="text"name="content" id="content" placeholder="Digite aqui sua publicação">
         <br><br>
         <button input class = "public" type= "submit" name= "publi" id= "publi">Publicar</button>
         <button input class = "public" type= "submit" name= "cancel" id= "cancel">Cancelar</button>
