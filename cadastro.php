@@ -15,15 +15,14 @@ if(isset($_POST['entrar']))
     $result = mysqli_query($conexao, "INSERT INTO usuario(nome, senha, email) 
     VALUES('$nome', '$senha', '$email')");
 
-    
-   echo "Sua conta foi cadastrada com sucesso!";
+header("Location: minhaconta.php");
    
    
    
 }else 
 {
 
-    echo "Ocorreu algum erro inseperado, tente novamente !";
+    echo "<h2>Ocorreu algum erro inseperado, tente novamente !";
 
 }
 
