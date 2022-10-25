@@ -42,7 +42,7 @@ if((!isset($_SESSION['email']) == true ) and (!isset($_SESSION['senha']) == true
 } else{
     $logado = $_SESSION['email'];
     
-   echo "$logado 
+   echo "$logado
   
    <li class='dropdown'>
    <div class='mega-menu'>

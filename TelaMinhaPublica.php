@@ -28,6 +28,7 @@ include("conexao.php");
      while($row = mysqli_fetch_array($result)){
         echo "<h3>".$row["titulo"]."<br>";
         echo "<h5>".$row["descricao"]."<br>";
+        echo "<h4>".$row["categoria"]."<br>";
      }
 /*
     $result = mysqli_query($conexao, "SELECT COUNT(*) FROM publicacao where id_user = '$id_user'") or die(mysqli_error());
