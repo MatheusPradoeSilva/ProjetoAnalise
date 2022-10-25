@@ -1,4 +1,5 @@
 CREATE database pubnow;
+use pubnow;
 
 CREATE table usuario
 (
