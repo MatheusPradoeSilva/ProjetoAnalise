@@ -1,7 +1,7 @@
 <?php
 
-include_once('conexao.php');
-include('menu.php');
+include("conexao.php");
+include("menu.php");
 
 ?>
 

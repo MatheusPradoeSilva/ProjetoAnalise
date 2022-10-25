@@ -2,7 +2,6 @@
 
 include_once('conexao.php');
 include("menu.php");
-
 ?>
 
 <!DOCTYPE html>
@@ -27,13 +26,24 @@ include("menu.php");
         <lable>Descrição</lable><br>
         <input type="text" name="descr" id="descr" placeholder="Digite aqui a descrição (opcional)">
         <br><br>
-                    <br>
+        <lable>Conteúdo</label>
+        <br>
         <input type="text"name="content" id="content" placeholder="Digite aqui sua publicação">
+        <br><br>
+    <select name="categ" id="categ">
+        <option value="arte "> Arte </option>
+        <option value="música"> Música </option>
+        <option value="esportes"> Esportes </option>
+        <option value="culinária"> Culinária </option>
+        <option value="pets"> Pets </option>
+        <option value="famosos"> Famosos </option>
+    </select>
+
         <br><br>
         <button input class = "public" type= "submit" name= "publi" id= "publi">Publicar</button>
         <button input class = "public" type= "submit" name= "cancel" id= "cancel">Cancelar</button>
     </div>
-
+</form>
 
 </body>
 

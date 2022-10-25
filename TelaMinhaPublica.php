@@ -16,7 +16,31 @@ include("conexao.php");
    <div class = corpo>
    <head>
     <h1>Suas publicações</h1><br>
+    <?php
 
+    $id_user = $_SESSION['id_user'];
+
+     $sql = "SELECT * FROM publicacao WHERE id_user = '$id_user'";
+     $result = $conexao->query($sql);
+ 
+     $cont = mysqli_num_rows($result);
+
+     while($row = mysqli_fetch_array($result)){
+        echo "<h3>".$row["titulo"]."<br>";
+        echo "<h5>".$row["descricao"]."<br>";
+     }
+/*
+    $result = mysqli_query($conexao, "SELECT COUNT(*) FROM publicacao where id_user = '$id_user'") or die(mysqli_error());
+
+    echo "$result";
+   
+    while($sql=mysqli_fetch_array($result)){
+           
+    echo $sql["titulo"];
+
+    }*/
+    ?>
+    
 </head>
 <body>
 
