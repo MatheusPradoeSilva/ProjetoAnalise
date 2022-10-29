@@ -2,12 +2,7 @@
 <html>
 
 <head>
-<meta charset="utf-8">
-<meta http-equiv="Cache-Control" content="no-store" />
-<meta name="viewpoet" content="width-device-width">
-    <link rel="stylesheet" type="text/css" href="cssanalise.css" />
-
-  <title>Minha conta</title>
+  <title>exibe usuários</title>
 
 
 
@@ -18,7 +13,7 @@
   <header>
     <?php
 
-    include_once('menu.php');
+    include('menuadmin.php');
 
     ?>
   </header>
@@ -27,6 +22,7 @@
       <table class="table table-hover table-striped">
       <thead class="thead_table" >
                             <tr>
+                            <th  class="th_table"  scope="col"><b>ID</b></th>
                             <th class="th_table" scope="col"><b>Nome</b></th>
                             <th class="th_table" scope="col"><b>Senha</th>
                             <th  class="th_table" scope="col"><b>E-mail</b></th>
@@ -34,26 +30,26 @@
                             </tr>
                         </thead>
         <tbody>
-          <?php 
+          <?php
 
 
-          include('conexao.php'); // Using database connection file here
 
-          $id_user = $_SESSION['id_user'];
 
-          $record = mysqli_query($conexao, "SELECT * from usuario WHERE id_user = '$id_user'"); // fetch data from database
-          
-          while ($row = mysqli_fetch_array($record)) {
+          include "conexao.php"; // Using database connection file here
+
+          $records = mysqli_query($conexao, "select * from usuario"); // fetch data from database
+
+          while ($row = mysqli_fetch_array($records)) {
           ?>
             <tr>
 
-              
+              <td> <?php echo "<h5>" . $row["id_user"] . "<br>"; ?> </td>
               <td> <?php echo "<h5>" . $row["nome"] . "<br>"; ?> </td>
               <td> <?php echo "<h5>" . $row["senha"] . "<br>"; ?> </td>
               <td> <?php echo "<h5>" . $row["email"] . "<br>"; ?> </td>
 
               <td>
-                <a href="editar_user.php?id_user=<?php echo $row['id_user']; ?>">Editar </a>
+                <a href="editar_user_admin.php?id_user=<?php echo $row['id_user']; ?>">Editar </a>
                 <a href="deletar_user.php?id_user=<?php echo $row['id_user']; ?>" onclick="return confirm('Tem certeza que deseja deletar este usuário?')">
        Deletar</a>
                 

@@ -12,15 +12,13 @@ include("conexao.php");
 <meta http-equiv="Cache-Control" content="no-store" />
 <meta name="viewpoet" content="width-device-width">
     <link rel="stylesheet" type="text/css" href="cssanalise.css" />
-   <title>Minhas publicações</title>
+   <title>Aba musical</title>
    <div class = corpo>
    <head>
-    <h1>Suas publicações</h1><br>
+    <h1>Música</h1><br>
     <?php
 
-    $id_user = $_SESSION['id_user'];
-
-     $sql = "SELECT * FROM publicacao WHERE id_user = '$id_user' and Status = 'Aceito'";
+     $sql = "SELECT * FROM publicacao WHERE categoria = 'Música'";
      $result = $conexao->query($sql);
  
      while($row = mysqli_fetch_array($result)){
@@ -28,16 +26,6 @@ include("conexao.php");
         echo "<h5>".$row["descricao"]."<br>";
         echo "<h4>".$row["categoria"]."<br>";
      }
-/*
-    $result = mysqli_query($conexao, "SELECT COUNT(*) FROM publicacao where id_user = '$id_user'") or die(mysqli_error());
-
-    echo "$result";
-   
-    while($sql=mysqli_fetch_array($result)){
-           
-    echo $sql["titulo"];
-
-    }*/
     ?>
     
 </head>

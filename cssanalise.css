@@ -28,7 +28,7 @@ a {text-decoration: none;}
 }
 
 .menubot{
-  margin-left: -305px;
+  margin-left: -150px;
   height: 27px;
   width: 27px;
   margin-top: 6px;
@@ -70,6 +70,13 @@ nav {
   margin-bottom: -6px;
   margin-top: -16px;
 }
+
+button {
+  all: unset;
+  cursor: pointer;
+  outline: revert;
+}
+
   .o{
     margin-left: -150px;
     width: 450px;

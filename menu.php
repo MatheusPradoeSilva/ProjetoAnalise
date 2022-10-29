@@ -20,6 +20,32 @@
 if((!isset($_SESSION['email']) == true ) and (!isset($_SESSION['senha']) == true))
 {
   echo " <li class='dropdown'>
+  <div class='mega-menu'>
+      <div class='container'>
+        <div class='item'>     
+        <li><a href='index.php'>Início</a></li>
+        <li><a href='TelaLogin.php'>Login</a></li>
+        <li><a href='TelaCadastro.php'>Cadastro</a></li>
+        <li><a href='regras.php'>Regras do site</a></li>
+        <li><a href='minhapublic.php'>Minhas publicações</a></li>
+        <li><a href='minhapublicar2.php'>Publicar</a></li>
+        <li class = 'linamenu'>________________</li>
+        <li><h5>CATEGORIAS<h5></li>
+        <li><a href='categ_arte.php'>Arte</a></li>
+        <li><a href='categ_musica.php'>Música</a></li>
+        <li><a href='categ_esporte.php'>Esportes</a></li>
+        <li><a href='categ_culinaria.php'>Culinária</a></li>
+        <li><a href='categ_famosos.php'>Famosos</a></li>
+        <li><a href='categ_pets.php'>Pets</a></li>";
+
+
+    unset($_SESSION['email']);
+    unset($_SESSION['senha']);
+} else{
+    $logado = $_SESSION['email'];
+    
+   echo "$logado
+    <li class='dropdown'>
       <div class='mega-menu'>
           <div class='container'>
             <div class='item'>     
@@ -30,41 +56,17 @@ if((!isset($_SESSION['email']) == true ) and (!isset($_SESSION['senha']) == true
             <li><a href='minhapublicar2.php'>Publicar</a></li>
             <li class = 'linamenu'>________________</li>
             <li><h5>CATEGORIAS<h5></li>
-            <li><a href='#'>Arte</a></li>
-            <li><a href='#'>Música</a></li>
-            <li><a href='#'>Esportes</a></li>
-            <li><a href='#'>Culinária</a></li>
-            <li><a href='#'>Famosos</a></li>
-            <li><a href='#'>Pets</a></li>";
+            <li><a href='categ_arte.php'>Arte</a></li>
+            <li><a href='categ_musica.php'>Música</a></li>
+            <li><a href='categ_esporte.php'>Esportes</a></li>
+            <li><a href='categ_culinaria.php'>Culinária</a></li>
+            <li><a href='categ_famosos.php'>Famosos</a></li>
+            <li><a href='categ_pets.php'>Pets</a></li>
 
-    unset($_SESSION['email']);
-    unset($_SESSION['senha']);
-} else{
-    $logado = $_SESSION['email'];
-    
-   echo "$logado
-  
-   <li class='dropdown'>
-   <div class='mega-menu'>
-       <div class='container'>
-         <div class='item'>     
- <li><a href='index.php'>Início</a></li>
-         <li><a href='minhaconta.php'>Minha conta</a></li>
-         <li><a href='regras.php'>Regras do site</a></li>
-         <li><a href='minhapublic.php'>Minhas publicações</a></li>
-         <li><a href='minhapublicar2.php'>Publicar</a></li>
-         <li class = 'linamenu'>________________</li>
-         <li><h5>CATEGORIAS<h5></li>
-         <li><a href='#'>Arte</a></li>
-         <li><a href='#'>Música</a></li>
-         <li><a href='#'>Esportes</a></li>
-         <li><a href='#'>Culinária</a></li>
-         <li><a href='#'>Famosos</a></li>
-         <li><a href='#'>Pets</a></li>
          <form action= 'sairconta.php'>
          <li><button name ='exit' id ='exit' type='submit'>Sair da conta</button></li>
          <div>
-         </form>" ;
+         </form>";
 }
 
       ?>
@@ -74,13 +76,14 @@ if((!isset($_SESSION['email']) == true ) and (!isset($_SESSION['senha']) == true
 
 <li class='dropdown'>
 <a href='#home'><i class="fa fa-angle-down"></i></a>
-   
-
 
 <div class="barra">
-      <input type="text" class="o" name="busc" placeholder="Pesquisar">
-      <input type="image" id="lupa" src="img/icons8-pesquisar-50.png" class ="lupa" />
-      </ul>
+<form action= "pesquisar.php" method= "POST">
+      <input type="text" class="o" name="busc" id ="busc" placeholder="Pesquisar">
+      <input type="image" id="lupa" name = "lupa" src="img/icons8-pesquisar-50.png" class ="lupa"> 
+</form>
+    </ul>
 </div>
+
 
 </nav>

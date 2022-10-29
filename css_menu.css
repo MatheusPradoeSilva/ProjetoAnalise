@@ -292,3 +292,10 @@ body {
     width: 170px;
     height: 35px;
 }
+
+button {
+    all: unset;
+    cursor: pointer;
+    outline: revert;
+  }
+  

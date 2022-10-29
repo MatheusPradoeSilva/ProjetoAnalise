@@ -21,9 +21,21 @@ if(isset($_POST['login']) && !empty($_POST['email']) && !empty($_POST['senha']))
     }else {
         $_SESSION['email'] = $email;
         $_SESSION['senha'] = $senha;
-        $_SESSION['id_user'] = $row['id_user']; 
+        $_SESSION['id_user'] = $row['id_user'];
+        
+        if(isset($_SESSION['email'])){
 
-        header("Location: index.php") ;
+                
+            if(($_SESSION['email'] == "admin@gmail.com") or ($_SESSION['senha'] == "eusouadmin")) {
+                header('location:paginaentradaadmin.php');
+            }
+            else{
+                header('location:index.php');
+            }	
+    }else{
+        header('location:index.php');
+        }
+
        
     }
 

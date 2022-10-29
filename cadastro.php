@@ -4,31 +4,24 @@ include_once('conexao.php');
 
 include("menu.php");
 
-if(isset($_POST['entrar']))
-{
+$nome = $_POST['nome'];
+$senha = $_POST['senha'];
+$email = $_POST['email'];
 
-    $nome = $_POST['nome'];
-    $senha = $_POST['senha'];
-    $email = $_POST['email'];
+    $sql = "SELECT * FROM usuario WHERE email = '$email' and senha= '$senha'";
+    $result = $conexao->query($sql);
 
+    $pegaEmail = $conexao->query("SELECT * FROM usuario WHERE email = '$email'");
 
-    $result = mysqli_query($conexao, "INSERT INTO usuario(nome, senha, email) 
-    VALUES('$nome', '$senha', '$email')");
+    if(mysqli_num_rows($pegaEmail) == 1){
 
-<<<<<<< HEAD
-header("Location: minhaconta.php");
-=======
+        echo"<h3>Esse email ja existe! Crie outro.";
+    }else{ 
+         $result = mysqli_query($conexao, "INSERT INTO usuario(nome, senha, email) 
+        VALUES('$nome', '$senha', '$email')");
     
-    echo "<h2>Cadastro feito com sucesso!";
->>>>>>> 32e3b99 (atualização categoria)
-   
-   
-   
-}else 
-{
-
-    echo "<h2>Ocorreu algum erro inseperado, tente novamente !";
-
+      
+    header("Location: minhaconta.php");
 }
 
 

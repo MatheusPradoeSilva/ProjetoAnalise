@@ -7,8 +7,6 @@ CREATE table usuario
     nome varchar(65) not null,
     senha varchar(60) not null,
     email varchar(50) not null,
-     CONSTRAINT FK_idpost FOREIGN KEY (id)
-     REFERENCES publicacao(id)
 );
 use pubnow;
 CREATE table publicacao
@@ -19,6 +17,7 @@ CREATE table publicacao
     conteudo varchar(4000) not null,
     id_user int not null, 
     categoria varchar(35) not null,
+    Status varchar(35) not null,
      CONSTRAINT FK_idusuario FOREIGN KEY (id_user)
      REFERENCES usuario(id_user)
 );

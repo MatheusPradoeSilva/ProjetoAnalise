@@ -1,7 +1,7 @@
 <?php
 
 include_once('conexao.php');
-include("menu.php");
+include("menuadmin.php");
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +12,7 @@ include("menu.php");
 <meta http-equiv="Cache-Control" content="no-store" />
 <meta name="viewpoet" content="width-device-width">
     <link rel="stylesheet" type="text/css" href="cssanalise.css" />
-   <title>Publicando</title>
+   <title>Publicando Admin</title>
 </head>
 <body>
     <form action= "publicar.php" method= "POST" enctype="multipart/form-data">
