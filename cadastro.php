@@ -21,7 +21,7 @@ $email = $_POST['email'];
         VALUES('$nome', '$senha', '$email')");
     
       
-    header("Location: minhaconta.php");
+    header("Location: Telalogin.php");
 }
 
 

@@ -18,7 +18,7 @@ include("conexao.php");
     <h1>Pets</h1><br>
     <?php
 
-     $sql = "SELECT * FROM publicacao WHERE categoria = 'Pets'";
+     $sql = "SELECT * FROM publicacao WHERE categoria = 'Pets' and Status = 'Aceito'";
      $result = $conexao->query($sql);
  
      while($row = mysqli_fetch_array($result)){
