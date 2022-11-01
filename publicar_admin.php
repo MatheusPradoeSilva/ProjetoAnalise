@@ -2,7 +2,7 @@
 
 <?php
 include("conexao.php");
-include("menu.php");
+include("menuadmin.php");
 if (isset($_POST['publi'])) {
 
   $titulo = $_POST['titulo'];
@@ -33,7 +33,7 @@ if (isset($_POST['publi'])) {
         values('$titulo', '$descr', '$content', '$id_user', '$categ', 'NaoAceito', '$target_file' )";
       if (mysqli_query($conexao, $sql)) {
 
-        header('Location: index.php');
+        header('Location: paginaentradaadmin.php');
       } else {
         echo mysqli_error($conexao);
       }

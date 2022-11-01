@@ -15,11 +15,11 @@ include("menuadmin.php");
    <title>Publicando Admin</title>
 </head>
 <body>
-    <form action= "publicar.php" method= "POST" enctype="multipart/form-data">
+    <form action= "publicar_admin.php" method= "POST" enctype="multipart/form-data">
     <div class = corpo>
    
     <div class="form-group">
-                <input class="form-control" type="file" name="uploadfile" value="" />
+                <input class="form-control" type="file" name="file_name" value="" />
             </div>
         <lable>Título</lable><br>
         <input type="text" name="titulo" id="titulo" placeholder="Digite aqui o título de sua publicação">

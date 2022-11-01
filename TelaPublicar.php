@@ -19,7 +19,7 @@ include("menu.php");
     <div class = corpo>
    
     <div class="form-group">
-                <input class="form-control" type="file" name="uploadfile" value="" />
+                <input class="form-control" type="file" name="file_name" value="" />
             </div>
         <lable>Título</lable><br>
         <input type="text" name="titulo" id="titulo" placeholder="Digite aqui o título de sua publicação">

@@ -22,11 +22,22 @@ include("conexao.php");
      $result = $conexao->query($sql);
  
      while($row = mysqli_fetch_array($result)){
-        echo "<h3>".$row["titulo"]."<br>";
-        echo "<h5>".$row["descricao"]."<br>";
-        echo "<h4>".$row["categoria"]."<br>";
-     }
-    ?>
+      ?>
+            <a href="verpost.php?id_post=<?php echo $rows['id_post'] ?>">
+                <?php 
+                echo"<h3>".$rows['nome']."<br>";
+                echo "<h2>".$rows['titulo']."<br>";
+                echo "<img src='{$linha['image']}'>";
+                echo "<h4>".$rows['descricao']."<br>";
+                echo "<h4>".$rows['conteudo']."<br>";
+                echo "<h4>".$rows['categoria']."<br>";
+                echo"___________________";
+                ?>
+              
+            </a>
+              <?php
+           }
+          ?>
     
 </head>
 <body>
