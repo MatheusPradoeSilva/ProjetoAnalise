@@ -20,7 +20,7 @@ if(!isset($_POST['lupa']) == 1){
     
     echo "<h3>Você pesquisou: $pesquisar<br>";
     echo"___________________<br>";
-    
+
     while($rows = mysqli_fetch_array($resultado)){
 
   ?>
@@ -28,7 +28,6 @@ if(!isset($_POST['lupa']) == 1){
       <a href="verpost.php?id_post=<?php echo $rows['id_post'] ?>">
       <?php echo "<h2>".$rows['titulo']."<br>";
       echo "<h4>".$rows['descricao']."<br>";
-      echo "<h4>".$rows['conteudo']."<br>";
       echo "<h4>".$rows['categoria']."<br>";
       echo"___________________";
       ?>

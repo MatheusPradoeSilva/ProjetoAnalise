@@ -12,7 +12,7 @@ include('menu.php');
     while($rows = mysqli_fetch_array($result)){
 
       echo "<h1>".$rows['titulo']."<br>";
-      echo "<h2>".$rows['categoria']."<br>";
+      echo "<img src='{$rows['image']}'>";
       echo "<h3>".$rows['descricao']."<br>";
       echo "<h4>".$rows['conteudo']."<br>";
 

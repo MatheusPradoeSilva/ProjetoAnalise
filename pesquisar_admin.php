@@ -24,7 +24,6 @@ if(!isset($_POST['lupa']) == 1){
       echo"<button input type = 'submit'>";
       echo "<h2>".$rows['titulo']."<br>";
       echo "<h4>".$rows['descricao']."<br>";
-      echo "<h4>".$rows['conteudo']."<br>";
       echo "<h4>".$rows['categoria']."<br>";
       echo"___________________";
       echo"</button><br>";

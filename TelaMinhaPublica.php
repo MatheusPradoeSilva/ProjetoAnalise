@@ -27,17 +27,14 @@ include("conexao.php");
         echo "<h3>".$row["titulo"]."<br>";
         echo "<h5>".$row["descricao"]."<br>";
         echo "<h4>".$row["categoria"]."<br>";
+        ?>
+        <a href="deletar_publi.php?id_post=<?php echo $row['id_post']; ?>" onclick="return confirm('Tem certeza que deseja deletar esta postagem?')">
+     Deletar</a>
+     <?php
      }
-/*
-    $result = mysqli_query($conexao, "SELECT COUNT(*) FROM publicacao where id_user = '$id_user'") or die(mysqli_error());
+    
+     
 
-    echo "$result";
-   
-    while($sql=mysqli_fetch_array($result)){
-           
-    echo $sql["titulo"];
-
-    }*/
     ?>
     
 </head>

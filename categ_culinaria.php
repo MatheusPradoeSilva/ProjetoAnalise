@@ -25,13 +25,10 @@ include("conexao.php");
         ?>
                 <a href="verpost.php?id_post=<?php echo $rows['id_post'] ?>">
                 <?php 
-                echo"<h3>".$rows['nome']."<br>";
-                echo "<h2>".$rows['titulo']."<br>";
-                echo "<img src='{$linha['image']}'>";
-                echo "<h4>".$rows['descricao']."<br>";
-                echo "<h4>".$rows['conteudo']."<br>";
-                echo "<h4>".$rows['categoria']."<br>";
-                echo"___________________";
+                 echo "<h2>".$row['titulo']."<br>";
+                 echo "<img src='{$row['image']}'>";
+                 echo "<h4>".$row['descricao']."<br>";
+                 echo"___________________";
                 ?>
               </a>
                 <?php

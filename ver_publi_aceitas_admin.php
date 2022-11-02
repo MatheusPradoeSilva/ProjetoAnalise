@@ -38,6 +38,7 @@ include("conexao.php");
     while ($linha = mysqli_fetch_array($result)) {
         echo "<h4>" . $linha["nome"] . "<br>";
         echo "<h4>" . $linha["email"] . "<br>";
+        echo "<img src='{$linha['image']}'";
         echo "<h3>" . $linha["titulo"] . "<br>";
         echo "<h5>" . $linha["descricao"] . "<br>";
         echo "<h5>" . $linha["conteudo"] . "<br>";

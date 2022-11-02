@@ -15,7 +15,7 @@ include("conexao.php");
    <title>Aba deliciosa</title>
    <div class = corpo>
    <head>
-    <h1>Culinária</h1><br>
+    <h1>Esportes</h1><br>
     <?php
 
      $sql = "SELECT * FROM publicacao WHERE categoria = 'Culinária' and Status = 'Aceito'";
@@ -24,14 +24,11 @@ include("conexao.php");
      while($row = mysqli_fetch_array($result)){
         ?>
          <a href="verpost.php?id_post=<?php echo $rows['id_post'] ?>">
-                <?php 
-                echo"<h3>".$rows['nome']."<br>";
-                echo "<h2>".$rows['titulo']."<br>";
-                echo "<img src='{$linha['image']}'>";
-                echo "<h4>".$rows['descricao']."<br>";
-                echo "<h4>".$rows['conteudo']."<br>";
-                echo "<h4>".$rows['categoria']."<br>";
-                echo"___________________";
+         <?php 
+         echo "<h2>".$row['titulo']."<br>";
+         echo "<img src='{$row['image']}'>";
+         echo "<h4>".$row['descricao']."<br>";
+         echo"___________________";
                 ?>
               </a>
                 <?php

@@ -22,10 +22,10 @@ include("menu.php");
     <div>
   
         <lable>Email</lable><br>
-        <input type="email" name= "email" id= "email" placeholder="Insira seu email">
+        <input type="email" name= "email" id= "email" placeholder="Insira seu email" required>
         <br><br>
         <lable>Senha</lable><br>
-        <input type="password" name= "senha" id= "senha" placeholder="Insira sua senha">
+        <input type="password" name= "senha" id= "senha" placeholder="Insira sua senha" required>
         <h5><a href='TelaEsqSen.php'> Esqueci minha senha</a><h5>
         
         

@@ -41,6 +41,7 @@ include("conexao.php");
        
         echo "<h4>" . $linha["nome"] . "<br>";
         echo "<h4>" . $linha["email"] . "<br>";
+        echo "<img src='{$linha['image']}'";
         echo "<h3>" . $linha["titulo"] . "<br>";
         echo "<h5>" . $linha["descricao"] . "<br>";
         echo "<h5>" . $linha["conteudo"] . "<br>";
@@ -54,7 +55,7 @@ include("conexao.php");
 
     <a href="aceitar_publi.php?id_post=<?php echo $linha['id_post']; ?>">Aceitar</a>
     <br>
-    <a href="deletar_publi_admin.php?id_post=<?php echo $linha['id_post']; ?>" onclick="return confirm('Tem certeza que deseja deletar este usuário?')">
+    <a href="deletar_publi_admin.php?id_post=<?php echo $linha['id_post']; ?>" onclick="return confirm('Tem certeza que deseja deletar esta postagem?')">
         Não Aceitar</a>
 
         <?php

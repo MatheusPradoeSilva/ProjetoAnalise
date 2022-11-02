@@ -22,14 +22,14 @@ include("menuadmin.php");
                 <input class="form-control" type="file" name="file_name" value="" />
             </div>
         <lable>Título</lable><br>
-        <input type="text" name="titulo" id="titulo" placeholder="Digite aqui o título de sua publicação">
+        <input type="text" name="titulo" id="titulo" placeholder="Digite aqui o título de sua publicação" required>
         <br><br>
         <lable>Descrição</lable><br>
-        <input type="text" name="descr" id="descr" placeholder="Digite aqui a descrição (opcional)">
+        <input type="text" name="descr" id="descr" placeholder="Digite aqui a descrição" required>
         <br><br>
         <lable>Conteúdo</label>
         <br>
-        <input type="text"name="content" id="content" placeholder="Digite aqui sua publicação">
+        <input type="text"name="content" id="content" placeholder="Digite aqui sua publicação" required>
         <br><br>
     <select name="categ" id="categ">
         <option value="arte "> Arte </option>
