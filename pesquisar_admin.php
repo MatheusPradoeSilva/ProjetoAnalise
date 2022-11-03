@@ -21,14 +21,17 @@ if(!isset($_POST['lupa']) == 1){
   echo"___________________<br>";
   while($rows = mysqli_fetch_array($resultado)){
 
-      echo"<button input type = 'submit'>";
-      echo "<h2>".$rows['titulo']."<br>";
-      echo "<h4>".$rows['descricao']."<br>";
-      echo "<h4>".$rows['categoria']."<br>";
-      echo"___________________";
-      echo"</button><br>";
-
+    ?>
+      
+    <a href="verpost_admin.php?id_post=<?php echo $rows['id_post'] ?>">
+    <?php echo "<h2>".$rows['titulo']."<br>";
+    echo "<h4>".$rows['descricao']."<br>";
+    echo "<h4>".$rows['categoria']."<br>";
+    echo"___________________";
+    ?>
     
+  </a>
+    <?php
   }
 }
   

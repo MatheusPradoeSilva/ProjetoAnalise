@@ -23,7 +23,7 @@ include("conexao.php");
  
      while($row = mysqli_fetch_array($result)){
         ?>
-              <a href="verpost.php?id_post=<?php echo $rows['id_post'] ?>">
+              <a href="verpost_admin.php?id_post=<?php echo $row['id_post'] ?>">
               <?php 
                   echo "<h2>".$row['titulo']."<br>";
                   echo "<img src='{$row['image']}'>";

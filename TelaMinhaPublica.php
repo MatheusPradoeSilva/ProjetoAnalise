@@ -24,10 +24,13 @@ include("conexao.php");
      $result = $conexao->query($sql);
  
      while($row = mysqli_fetch_array($result)){
-        echo "<h3>".$row["titulo"]."<br>";
+        ?>
+        <a href="verpost_admin.php?id_post=<?php echo $row['id_post'] ?>">
+        <?php echo "<h3>".$row["titulo"]."<br>";
         echo "<h5>".$row["descricao"]."<br>";
         echo "<h4>".$row["categoria"]."<br>";
         ?>
+        </a>
         <a href="deletar_publi.php?id_post=<?php echo $row['id_post']; ?>" onclick="return confirm('Tem certeza que deseja deletar esta postagem?')">
      Deletar</a>
      <?php
