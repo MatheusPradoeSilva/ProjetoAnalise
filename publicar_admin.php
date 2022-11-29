@@ -7,7 +7,7 @@ if (isset($_POST['publi'])) {
 
   $titulo = $_POST['titulo'];
   $descr = $_POST['descr'];
-  $content = $_POST['content'];
+  $content = $_POST['mytextarea'];
   $id_user = $_SESSION['id_user'];
   $categ = $_POST['categ'];
 

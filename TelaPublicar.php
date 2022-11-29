@@ -13,6 +13,23 @@ include("menu.php");
 <meta name="viewpoet" content="width-device-width">
     <link rel="stylesheet" type="text/css" href="cssanalise.css" />
    <title>Publicando</title>
+
+   <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
+   <script>
+  tinymce.init({
+    selector: '#mytextarea',
+    plugins: [
+      'a11ychecker','advcode','advtable','autolink','export',
+      'lists','link','charmap','preview','anchor','searchreplace','visualblocks',
+      'powerpaste','fullscreen','formatpainter','media','wordcount'
+    ],
+    toolbar: 'undo redo | formatpainter casechange blocks | bold italic backcolor | ' +
+      'alignleft aligncenter alignright alignjustify | ' +
+      'bullist numlist checklist outdent indent | removeformat'
+  });
+</script>
+
 </head>
 <body>
     <form action= "publicar.php" method= "POST" enctype="multipart/form-data">
@@ -29,7 +46,7 @@ include("menu.php");
         <br><br>
         <lable>Conteúdo</label>
         <br>
-        <textarea name="content" id="content" placeholder="Digite aqui sua publicação"></textarea>
+        <textarea name="mytextarea" id="mytextarea" placeholder="Digite aqui sua publicação"></textarea>
         <br><br>
     <select name="categ" id="categ">
         <option value="arte "> Arte </option>

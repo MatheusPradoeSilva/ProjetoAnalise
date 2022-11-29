@@ -14,7 +14,7 @@ CREATE table publicacao
     id_post int AUTO_INCREMENT primary key NOT NULL,
     titulo varchar(65) not null,
     descricao varchar(60),
-    conteudo varchar(4000) not null,
+    conteudo text not null,
     id_user int not null, 
     categoria varchar(35) not null,
     Status varchar(35) not null,
